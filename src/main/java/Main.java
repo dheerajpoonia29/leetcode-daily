@@ -1,9 +1,9 @@
-import org.year2024.Dec4Easy;
-import org.year2024.Nov30Hard;
+import org.year2024.Dec5Med;
+import org.year2024.Dec6Med;
 
 public class Main {
     public static void main(String[] args) {
-        Nov30Hard obj = new Nov30Hard();
+        Dec6Med obj = new Dec6Med();
         obj.solve();
     }
 }
