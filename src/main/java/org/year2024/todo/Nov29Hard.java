@@ -1,4 +1,4 @@
-package org.year2024;
+package org.year2024.todo;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

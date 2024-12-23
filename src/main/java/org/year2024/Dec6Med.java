@@ -3,21 +3,26 @@ package org.year2024;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Dec6Med {
     public int maxCount(int[] banned, int n, int maxSum) {
-        Arrays.sort(banned);
+        Set<Integer> tempArr = Arrays.stream(banned).boxed().collect(Collectors.toSet());
         List<Integer> arr = new ArrayList<>();
-        int totalSum = 0;
-        for(int i=1; i<=n; i++) {
-            if(Arrays.binarySearch(banned, i)<0) {
-                totalSum+=i;
+        for(Integer i=1; i<=n; i++) {
+            if(!tempArr.contains(i))
                 arr.add(i);
+        }
+
+        for(Integer i: banned) {
+            while(arr.contains(i)) {
+                arr.remove(i);
             }
         }
 
         int ans = 0;
-        totalSum = 0;
+        int totalSum = 0;
         for(Integer i: arr) {
             if(totalSum+i<=maxSum) {
                 totalSum+=i;
