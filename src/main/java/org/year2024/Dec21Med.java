@@ -55,8 +55,8 @@ class TreeNode {
             return null;
         }
         TreeNode node = new TreeNode(arr[i]);
-        node.left = levelOrderNodeInsertion(arr, 2 * i + 1);   // Left child at index 2*i + 1
-        node.right = levelOrderNodeInsertion(arr, 2 * i + 2);  // Right child at index 2*i + 2
+        node.right = levelOrderNodeInsertion(arr, 2 * i + 1);   // Left child at index 2*i + 1
+        node.left = levelOrderNodeInsertion(arr, 2 * i + 2);  // Right child at index 2*i + 2
         return node;
     }
 
