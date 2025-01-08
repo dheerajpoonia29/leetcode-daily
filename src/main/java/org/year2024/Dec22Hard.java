@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package org.year2024;
+
 import java.util.Arrays;
 
 public class Dec22Hard {
